@@ -22,7 +22,7 @@ class CashCardAppApplicationTests {
    @Test
     void shouldReturnACardCashWhenDataSaved(){
 
-       ResponseEntity<String> response  = restTemplate.getForEntity("/cashcards/99", String.class);
+       ResponseEntity<String> response  = restTemplate.getForEntity("/cashcards/100", String.class);
 
        assertEquals(response.getStatusCode() , HttpStatus.OK);
 
@@ -31,7 +31,7 @@ class CashCardAppApplicationTests {
        Number id = documentContext.read("$.id");
 
        assertThat(id).isNotNull();
-       assertThat(id).isEqualTo(99);
+       assertThat(id).isEqualTo(100);
 
        Double amount = documentContext.read("$.amount");
 

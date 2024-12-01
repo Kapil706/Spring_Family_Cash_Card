@@ -3,9 +3,10 @@ package com.example.cashcardapp;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.data.annotation.Id;
 
 
-public record CashCard (Long id, Double amount){
+public record CashCard (@Id Long id, Double amount){
 
 //    @JsonCreator
 //    public CashCard(
